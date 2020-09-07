@@ -21,9 +21,9 @@ You must have Ruby installed. Then, go to the project folder and type in `ruby b
 
 👤 **Blaise Pascal Shyaka**
 
-- Github: [@alvarorf](https://github.com/)
-- Twitter: [@aaruizf](https://twitter.com/)
-- Linkedin: [linkedin](https://www.linkedin.com/)
+- Github: [@Blaise-Shyaka](https://github.com/Blaise-Shyaka)
+- Twitter: [@blaiseshyaka95](https://twitter.com/blaiseshyaka95)
+- Linkedin: [@Blaiseshyaka](https://www.linkedin.com/blaise-pascal-shyaka-b1340b111/)
 
 ## 🤝 Contributing
 
