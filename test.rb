@@ -1,3 +1,18 @@
+# Loop through an array of elements 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def bubble_sort(argument)
