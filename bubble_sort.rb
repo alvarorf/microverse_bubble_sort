@@ -13,8 +13,25 @@ Then, we iterate through length-1 of arr
 And so on...
 =end
 
+def is_sorted?(a)
+  m=0
+  while m<a.length-1
+    if a[m]<=a[m+1]
+      
+    else
+      return false
+    end
+    m+=1
+  end
+  return true
+end
+
+
 def bubble_sort(arr)
-  
+  if is_sorted?(arr)
+    puts "Hello..."
+    return arr
+  end
   j=0
   while j<arr.length-1
     puts "J is #{j}"
@@ -41,9 +58,18 @@ def bubble_sort(arr)
 end
 
 test_arr = [26,6,4,3,1]
-puts bubble_sort(test_arr)
-puts test_arr
+arr_sorted=[1,2,3]
+#puts bubble_sort(test_arr)
+puts bubble_sort(arr_sorted)
 
+
+
+#a=[1,2,3,4,11,6,8]
+
+
+
+
+#puts is_sorted?(a)
 
 
 
