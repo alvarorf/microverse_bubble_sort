@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Initialize swap count to 0
 # Loop throughout the length of an array
 # For each element check if it is greater than the one to its right
