@@ -12,15 +12,17 @@ def bubble_sort(unsorted_array)
   times_elts_were_swapped = 0
 
   unsorted_array.each do |elt|
-    for i in 0...unsorted_array.length do
-      n = unsorted_array[i] <=> unsorted_array[i + 1]
 
-      unsorted_array[i], unsorted_array [i + n] = unsorted_array[i + n], unsorted_array[i] if n == 1
-      
-      times_elts_were_swapped +=1 if n == 1
+    for i in 0...unsorted_array.length do
+
+      spaceship_operator_result = unsorted_array[i] <=> unsorted_array[i + 1]
+      unsorted_array[i], unsorted_array [i + spaceship_operator_result] = unsorted_array[i + spaceship_operator_result], unsorted_array[i] if spaceship_operator_result == 1
+      times_elts_were_swapped +=1 if spaceship_operator_result == 1
+
     end
-    
+
     break if times_elts_were_swapped == 0
+
   end
 end
 
@@ -29,6 +31,8 @@ puts "========"
 puts bubble_sort([3,5,4,0,3,2,1])
 puts "========"
 puts bubble_sort([1,2,3,4,5,6])
+puts "========"
+puts bubble_sort(["m","c","f", "z","a","k"])
 puts "========"
 puts bubble_sort("random string")
 
