@@ -39,9 +39,3 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is for microverse course purposes.
-
-
-## Screenshots:
-
-## BubbleSort:
-![screenshot](/images/bubblesort.png)
