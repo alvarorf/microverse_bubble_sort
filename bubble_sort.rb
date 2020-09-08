@@ -1,58 +1,40 @@
-=begin
-arr=[10,3,2,5,4]
-Loop through an array of elements (arr)
-First check if arr is already sorted
-If it is not sorted, then 
-First pass: Iterate through the length of arr
-We compare arr[i] with arr[i+1], so that if arr[i]>arr[i+1], 
-we switch them so we store arr[i] in a temporary variable temp=arr[i], 
-and then temp=arr[i]. Then arr[i]=arr[i+1], then arr[i+1]=temp
-Second pass: 
-First check if arr is already sorted
-Then, we iterate through length-1 of arr
-And so on...
-=end
+# Initialize swap count to 0
+# Loop throughout the length of an array
+# For each element check if it is greater than the one to its right
+# If it is, swap them
+# Increment the swap count by one
+# If swap count is greater than 0, repeat this process
 
-def bubble_sort(arr)
-  
-  j=0
-  while j<arr.length-1
-    puts "J is #{j}"
-    puts "arr.length is #{arr.length}"
-    i=0
-    while i < arr.length-1
-      puts "i is #{i}"
-      puts "arr.length is #{arr.length}"
-      if arr[i]>arr[i+1]
-        temp = arr[i]
-        arr[i] = arr[i+1]
-        arr[i+1] = temp
-      end
-      i+=1
-      print arr
+def bubble_sort(unsorted_array)
+
+  return puts "Wrong type of argument. It should be an array!" unless unsorted_array.kind_of? (Array)
+
+  times_elts_were_swapped = 0
+
+  unsorted_array.each do |elt|
+    for i in 0...unsorted_array.length do
+      n = unsorted_array[i] <=> unsorted_array[i + 1]
+
+      unsorted_array[i], unsorted_array [i + n] = unsorted_array[i + n], unsorted_array[i] if n == 1
+      
+      times_elts_were_swapped +=1 if n == 1
     end
-    j+=1
+    
+    break if times_elts_were_swapped == 0
   end
-
-
-  return arr
-
-  
 end
 
-test_arr = [26,6,4,3,1]
-puts bubble_sort(test_arr)
-puts test_arr
+puts bubble_sort([6,5,4,3,2,1])
+puts "========"
+puts bubble_sort([3,5,4,0,3,2,1])
+puts "========"
+puts bubble_sort([1,2,3,4,5,6])
+puts "========"
+puts bubble_sort("random string")
 
-
-
-
-
-
-
-
-
-
-
-
+# puts "========"
+# [1,2,3,4,5,6].each do |left, right|
+#   puts "this is left #{left}"
+#   puts "this is right #{right}"
+# end
 
