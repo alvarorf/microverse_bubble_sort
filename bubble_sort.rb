@@ -1,4 +1,4 @@
-# rubocop:disable Style/FrozenStringLiteralComment
+# rubocop:disable
 # Initialize swap count to 0
 # Loop throughout the length of an array
 # For each element check if it is greater than the one to its right
@@ -41,4 +41,4 @@ def bubble_sort_by(arr)
   end
 end
 
-# rubocop:enable Style/FrozenStringLiteralComment
+# rubocop:enable
