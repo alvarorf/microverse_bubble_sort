@@ -29,7 +29,6 @@ end
 def bubble_sort_by(arr)
   i = 0
   times_elts_were_swapped = 0
-  return unless block_given?
 
   arr.each do |_el|
     while i < arr.length - (i + 1)
