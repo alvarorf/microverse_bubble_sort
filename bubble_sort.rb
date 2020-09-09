@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# frozen_string_literal: false
 
 # Initialize swap count to 0
 # Loop throughout the length of an array
@@ -23,7 +23,7 @@ def bubble_sort(uns_array)
       i += 1
     end
     number_of_iterations_through_array += 1
-    break if times_elts_were_swapped.zero?
+    return uns_array if times_elts_were_swapped.zero?
   end
 end
 
@@ -39,20 +39,6 @@ def bubble_sort_by(arr)
       times_elts_were_swapped += 1 if comparison_result.positive?
       i += 1
     end
-    break if times_elts_were_swapped.zero?
+    return arr if times_elts_were_swapped.zero?
   end
 end
-
-puts '====== Testing bubble_sort_by ========'
-puts bubble_sort_by(%w[hi hello hey brando]) { |el1, el2| el1.length - el2.length }
-
-puts '====== Testing bubble_sort ========'
-puts bubble_sort([6, 5, 4, 3, 2, 1])
-puts '========'
-puts bubble_sort([3, 5, 4, 0, 3, 2, 1])
-puts '========'
-puts bubble_sort([1, 2, 3, 4, 5, 6])
-puts '========'
-puts bubble_sort(%w[m c f z a k])
-puts '========'
-puts bubble_sort('random string')
