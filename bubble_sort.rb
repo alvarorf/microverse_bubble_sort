@@ -7,7 +7,7 @@
 # If swap count is greater than 0, repeat this process
 
 def bubble_sort(uns_array)
-  return 'Wrong type of argument. It should be an array!' unless uns_array.is_a? Array
+  return 'Argument should be an array!' unless uns_array.is_a? Array
 
   times_elts_were_swapped = 0
   number_of_iterations_through_array = 0
