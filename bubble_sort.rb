@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Initialize swap count to 0
 # Loop throughout the length of an array
 # For each element check if it is greater than the one to its right
@@ -5,12 +7,12 @@
 # Increment the swap count by one
 # If swap count is greater than 0, repeat this process
 
-
 def bubble_sort(uns_array)
   return 'Wrong type of argument. It should be an array!' unless uns_array.is_a? Array
+
   times_elts_were_swapped = 0
   number_of_iterations_through_array = 0
-  uns_array.each do |_elt|
+  uns_array.each do
     i = 0
     while i < uns_array.length - number_of_iterations_through_array
       spaceship_operator_result = uns_array[i] <=> uns_array[i + 1]
@@ -28,16 +30,16 @@ end
 def bubble_sort_by(arr)
   i = 0
   times_elts_were_swapped = 0
-  if block_given?
-    arr.each do |_el|
-      while i < arr.length - (i + 1)
-        comparison_result = yield(arr[i], arr[i + 1])
-        arr[i], arr [i + 1] = arr[i + 1], arr[i] if comparison_result.positive?
-        times_elts_were_swapped += 1 if comparison_result.positive?
-        i += 1
-      end
-      break if times_elts_were_swapped.zero?
+  return unless block_given?
+
+  arr.each do |_el|
+    while i < arr.length - (i + 1)
+      comparison_result = yield(arr[i], arr[i + 1])
+      arr[i], arr [i + 1] = arr[i + 1], arr[i] if comparison_result.positive?
+      times_elts_were_swapped += 1 if comparison_result.positive?
+      i += 1
     end
+    break if times_elts_were_swapped.zero?
   end
 end
 
