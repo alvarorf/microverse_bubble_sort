@@ -1,5 +1,4 @@
-# frozen_string_literal: false
-
+# rubocop:disable Style/FrozenStringLiteralComment
 require_relative 'bubble_sort.rb'
 
 puts '====== Testing bubble_sort_by ========'
@@ -15,3 +14,4 @@ puts '========'
 puts bubble_sort(%w[m c f z a k])
 puts '========'
 puts bubble_sort('random string')
+# rubocop:enable Style/FrozenStringLiteralComment

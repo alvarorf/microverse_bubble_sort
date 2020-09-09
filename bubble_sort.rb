@@ -1,5 +1,4 @@
-# frozen_string_literal: false
-
+# rubocop:disable Style/FrozenStringLiteralComment
 # Initialize swap count to 0
 # Loop throughout the length of an array
 # For each element check if it is greater than the one to its right
@@ -42,3 +41,5 @@ def bubble_sort_by(arr)
     return arr if times_elts_were_swapped.zero?
   end
 end
+
+# rubocop:enable Style/FrozenStringLiteralComment
