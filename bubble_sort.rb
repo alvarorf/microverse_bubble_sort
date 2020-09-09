@@ -13,12 +13,12 @@ def bubble_sort(uns_array)
   number_of_iterations_through_array = 0
   uns_array.each do
     i = 0
-    while i < uns_array.length - number_of_iterations_through_array
-      spaceship_operator_result = uns_array[i] <=> uns_array[i + 1]
-      if spaceship_operator_result == 1
-        uns_array[i], uns_array [i + spaceship_operator_result] = uns_array[i + spaceship_operator_result], uns_array[i]
+    while i < uns_array.length - (number_of_iterations_through_array + 1)
+      spaceship_operator_result = uns_array[i] > uns_array[i + 1]
+      if spaceship_operator_result
+        uns_array[i], uns_array [i + 1] = uns_array[i + 1], uns_array[i]
+        times_elts_were_swapped += 1
       end
-      times_elts_were_swapped += 1 if spaceship_operator_result == 1
       i += 1
     end
     number_of_iterations_through_array += 1
