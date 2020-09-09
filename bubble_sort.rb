@@ -27,18 +27,21 @@ def bubble_sort(uns_array)
 end
 
 def bubble_sort_by(arr)
-  i = 0
   times_elts_were_swapped = 0
-
+  pass=0
   arr.each do |_el|
-    while i < arr.length - (i + 1)
+    i = 0
+    while i < arr.length - (pass+1)
       comparison_result = yield(arr[i], arr[i + 1])
       arr[i], arr [i + 1] = arr[i + 1], arr[i] if comparison_result.positive?
       times_elts_were_swapped += 1 if comparison_result.positive?
       i += 1
     end
+    pass+=1
     return arr if times_elts_were_swapped.zero?
   end
 end
 
 # rubocop:enable
+
+puts bubble_sort_by(%w[hello b hey hi]) { |el1, el2| el1.length - el2.length }
