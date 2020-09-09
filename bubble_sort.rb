@@ -5,9 +5,9 @@
 # Increment the swap count by one
 # If swap count is greater than 0, repeat this process
 
+
 def bubble_sort(uns_array)
   return 'Wrong type of argument. It should be an array!' unless uns_array.is_a? Array
-
   times_elts_were_swapped = 0
   number_of_iterations_through_array = 0
   uns_array.each do |_elt|
@@ -20,11 +20,8 @@ def bubble_sort(uns_array)
       times_elts_were_swapped += 1 if spaceship_operator_result == 1
       i += 1
     end
-
     number_of_iterations_through_array += 1
     break if times_elts_were_swapped.zero?
-
-    puts "OUTSIDE WHILE: i is #{i}; spaceship_operator_result is #{spaceship_operator_result} and array is #{uns_array}"
   end
 end
 

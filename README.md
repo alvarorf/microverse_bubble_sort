@@ -1,6 +1,6 @@
 # Advanced Building Blocks: Bubble Sort
 
-Welcome to our project "Advanced Building Blocks: Bubble Sort". The purpose of this project was to develop our own Bubble sort algorithm.
+Welcome to our project "Advanced Building Blocks: Bubble Sort". The purpose of this project was to develop our own Bubble sort algorithm. We developed two versions: `bubble_sort()` which only accepts an array as an argument and `bubble_sort_by()` which can also take in a block as an argument.
 
 ## Built With
 
@@ -9,7 +9,12 @@ Welcome to our project "Advanced Building Blocks: Bubble Sort". The purpose of t
 
 ### Setup
 
-You must have Ruby installed. Then, go to the project folder and type in `ruby bubble_sort.rb`.
+- You must have Ruby and Bundler (`gem install bundler`) installed (>=2.7.0).
+- Then, clone the repo with `git clone https://github.com/alvarorf/microverse_bubble_sort`.
+- Then, go to the project folder (cd into it, if you are in an Unix-like Operating System).
+`ruby bubble_sort.rb`.
+- Install the dependencies by typing in `bundle install` in the command line.
+- Run the project by typing in: `ruby bubble_sort.rb` in the command line.
 
 ## Authors
 
